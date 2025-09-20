@@ -1,0 +1,53 @@
+Lab 4 – Diffie-Hellman Method with Elliptic Curves
+Objective and Task Statement
+
+The goal of this work is to develop a program implementation of the Diffie-Hellman method using elliptic curves.
+The implementation should:
+
+Check whether a given point lies on the elliptic curve (formula 8.2).
+
+Perform scalar multiplication of a point by a secret key.
+
+Ensure that both participants in the key exchange obtain the same result.
+
+
+Input Data
+
+Programming language: Python
+Parameters of elliptic curve:  a,b,p
+Base point: G=(x,y)
+Secret keys: 𝑘1,𝑘2
+
+Algorithm Description
+
+Define elliptic curve with parameters a,b,p.
+
+Check whether the given point  G(x,y) belongs to the curve.
+
+Implement point addition:
+
+  For two different points.
+
+  For the same point (doubling).
+
+Implement scalar multiplication of a point  k⋅G using the binary expansion method (double-and-add).
+
+Each participant multiplies the base point by their secret key and exchanges the result.
+
+Both compute the final shared key by multiplying the received point with their own secret key.	​
+
+Results and Analysis
+
+Program checks if base point 
+
+G belongs to the curve.
+
+Computes values of scalar multiplications:
+
+
+R1=k1⋅G
+
+
+R2=k2⋅G
+
+Both participants, after exchange, obtain the same shared key.
